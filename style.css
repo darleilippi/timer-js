@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Montserrat, serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--bg-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--text-color);
+
+    transition: all 0.5s;
+}
+
+body.light {
+    --bg-color: #ffffff;
+    --text-color: #4a4a4a;
+
+    --border-color: #4a4a4a;
+
+    --details: #22a84a;
+    --content: #2c2c2c;
+    --content-text: #ffffff;
+}
+
+body.dark {
+    --bg-color: #4a4a4a;
+    --text-color: #ffffff;
+
+    --border-color: #ffffff;
+
+    --details: #22a84a;
+    --content: #ffffff;
+    --content-text: #4a4a4a;
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-theme input[type="checkbox"] {
+    //display: none;
+}
+
+.toggle-theme button {
+    cursor: pointer;
+
+    padding: 5px 10px;
+
+    font-size: 9pt;
+
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--details);
+}
+
+.toggle-theme button:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.toggle-theme button:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.toggle-theme button:first-child:not(.active) {
+    border-right: none;
+}
+
+.toggle-theme button:last-child:not(.active) {
+    border-left: none;
+}
+
+.toggle-theme .light.active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.toggle-theme .dark.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.container .title,
+.container .timer {
+    color: var(--content-text);
+    background-color: var(--content);
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+    transition: all 0.3s;
+
+    min-width: 320px;
+    width: 320px;
+}
+
+.container .title {
+    font-weight: 100 !important;
+    text-align: center;
+
+    padding: 10px;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+    margin-bottom: 3px;
+}
+
+.container .timer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px 20px;
+
+    margin-bottom: 3px;
+}
+
+.container .timer .hours,
+.container .timer .minutes,
+.container .timer .seconds {
+    font-size: 50pt;
+    font-weight: 600;
+}
+
+.container .timer .separator {
+    font-size: 40pt;
+    font-weight: 400;
+}
+
+.container .actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.container .actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    cursor: pointer;
+
+    padding: 15px;
+
+    border: none;
+    font-size: 20pt;
+
+    background-color: var(--content);
+    color: var(--details);
+
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+
+    transition: all 0.3s;
+}
+
+.container .actions button:hover {
+    background-color: var(--content);
+}
+
+.container .actions button:nth-child(2) {
+    margin: 0 3px;
+}
+
+.container .actions button:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.container .actions button:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.midea {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.midea a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20pt;
+
+    text-decoration: none;
+
+    padding: 5px;
+
+    color: var(--text-color);
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+
+    transition: all 0.3s;
+}
+
+.midea a:first-child {
+    margin-right: 20px;
+}
+
+.midea a:first-child:hover {
+    border: 1px solid var(--border-color);
+}
+
+.midea a:last-child:hover {
+    border: 1px solid var(--border-color);
+}

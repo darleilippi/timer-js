@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timer JS</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="./style.css">
+
+        <script src="https://unpkg.com/phosphor-icons"></script>
+    </head>
+    <body class="light">
+        <div class="toggle-theme">
+            <button class="light active" id="btn-light">Light</button>
+            <button class="dark" id="btn-dark">Dark</button>
+        </div>
+        <div class="container">
+            <h1 class="title">Timer JS</h1>
+
+            <div class="timer">
+                <span class="hours" id="timer-hours">00</span>
+                <span class="separator">:</span>
+                <span class="minutes" id="timer-minutes">00</span>
+                <span class="separator">:</span>
+                <span class="seconds" id="timer-seconds">00</span>
+            </div>
+
+            <div class="actions">
+                <button type="button" id="btn-play" title="Play">
+                    <i class="ph-play"></i>
+                </button>
+                <button type="button" id="btn-pause" title="Pause">
+                    <i class="ph-pause"></i>
+                </button>
+                <button type="button" id="btn-stop" title="Stop">
+                    <i class="ph-stop"></i>
+                </button>
+            </div>
+
+            <div class="midea">
+                <a href="" title="Github">
+                    <i class="ph-github-logo"></i>
+                </a>
+    
+                <a href="" title="Linkedin">
+                    <i class="ph-linkedin-logo"></i>
+                </a>
+            </div>
+        </div>
+
+        
+
+        <script src="./script.js"></script>
+    </body>
+</html>
