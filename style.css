@@ -54,14 +54,19 @@ body.dark {
 }
 
 .toggle-theme button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
 
     padding: 5px 10px;
+    min-height: 24px;
+    min-width: 34px;
 
     font-size: 9pt;
 
     background-color: transparent;
-    color: var(--text-color);
     border: 1px solid var(--details);
 
     box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
@@ -69,7 +74,11 @@ body.dark {
     transition: all ease 0.3s;
 }
 
-.toggle-theme button:active {
+.toggle-theme button.active {
+    cursor: not-allowed;
+}
+
+.toggle-theme button:not(.active):active {
     transform: translateY(2px);
 
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
@@ -85,22 +94,22 @@ body.dark {
     border-bottom-right-radius: 3px;
 }
 
-.toggle-theme button:first-child:not(.active) {
+.toggle-theme button:not(.active):first-child {
     border-right: none;
 }
 
-.toggle-theme button:last-child:not(.active) {
+.toggle-theme button:not(.active):last-child {
     border-left: none;
 }
 
-.toggle-theme .light.active {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-.toggle-theme .dark.active {
+.toggle-theme .light {
     background-color: #ffffff;
     color: #000000;
+}
+
+.toggle-theme .dark {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .container .title,
@@ -169,6 +178,7 @@ body.dark {
     justify-content: center;
 
     width: 100%;
+    min-height: 56px;
     cursor: pointer;
 
     padding: 15px;
