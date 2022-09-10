@@ -53,10 +53,6 @@ body.dark {
     align-items: center;
 }
 
-.toggle-theme input[type="checkbox"] {
-    //display: none;
-}
-
 .toggle-theme button {
     cursor: pointer;
 
@@ -120,8 +116,10 @@ body.dark {
 }
 
 .container .title {
-    font-weight: 100 !important;
     text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
 
     padding: 10px;
 
@@ -132,25 +130,29 @@ body.dark {
 }
 
 .container .timer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    
+    grid-template-columns: 1fr 10px 1fr 10px 1fr;
+
+    font-size: 40pt;
+    font-weight: 200;
 
     padding: 10px 20px;
 
     margin-bottom: 3px;
 }
 
-.container .timer .hours,
-.container .timer .minutes,
-.container .timer .seconds {
-    font-size: 50pt;
-    font-weight: 600;
-}
+.container .timer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.container .timer .separator {
-    font-size: 40pt;
-    font-weight: 400;
+    text-align: center;
+
+    height: 70px;
+    line-height: 70px;
+
+    letter-spacing: 5px;
 }
 
 .container .actions {
@@ -182,9 +184,13 @@ body.dark {
     transition: all ease 0.3s;
 }
 
-.container .actions button:active {
+.container .actions button:disabled {
+    cursor: not-allowed;
+    color: #8b8b8b;
+}
+
+.container .actions button:active:not(:disabled) {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-    transform: translateZ(4px);
     transform: translateY(4px);
 }
 
@@ -221,7 +227,7 @@ body.dark {
 
     padding: 5px;
 
-    color: var(--text-color);
+    color: var(--details);
     border: 1px solid transparent;
 
     border-radius: 5px;

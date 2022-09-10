@@ -59,6 +59,10 @@ function handleStartTimer() {
 
     if (tid == null)
         tid = setInterval(handleTimer, 1000);
+
+    btnPlay.disabled = true;
+    btnPause.disabled = false;
+    btnStop.disabled = false;
 }
 
 function handleStopTimer() {
@@ -69,11 +73,19 @@ function handleStopTimer() {
     timerHours = 0;
     tid = null;
 
+    btnPlay.disabled = false;
+    btnPause.disabled = true;
+    btnStop.disabled = true;
+
     renderTime();
 }
 
 function handlePauseTimer() {
     isPausedTimer = true;
+
+    btnPlay.disabled = false;
+    btnPause.disabled = true;
+    btnStop.disabled = false;
 }
 
 function renderTime() {
