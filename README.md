@@ -11,4 +11,4 @@ Um projeto simples, onde é visualizado um cronômetro com a possibilidade de "I
 - HTML
 - CSS
 - JavaScript
-- ![Phosphor Icons](https://phosphoricons.com/)
+- [Phosphor Icons](https://phosphoricons.com/)
