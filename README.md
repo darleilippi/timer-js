@@ -1,6 +1,6 @@
 # TIMER JS
 
-Um projeto simples, onde é visualizado um cronômetro com a possibilidade de "Iniciar", "Pausar" e "Parar" o tempo decorrido. Também é possivel alterar o tema do site entre "Claro" e "Escuro".
+Um projeto simples, onde é visualizado um cronômetro com a possibilidade de "Iniciar", "Pausar" e "Parar" o tempo decorrido. Também é possivel alterar o tema do projeto entre "Claro" e "Escuro".
 
 ## Demonstração do projeto
 
@@ -10,5 +10,5 @@ Um projeto simples, onde é visualizado um cronômetro com a possibilidade de "I
 
 - HTML
 - CSS
-- Javascript
-- Phosphor Icons
+- JavaScript
+- ![Phosphor Icons](https://phosphoricons.com/)
